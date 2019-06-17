@@ -10,20 +10,20 @@ namespace CreateClass
 
     class Person
     {
-        string name;
-        DateTime birthdate;
-        Gender gender;
+        private string Name;
+        private DateTime Birthdate;
+        private Gender Gender;
 
-        public Person(string name, DateTime birthdate, Gender gender)
+        public Person(string Name, DateTime Birthdate, Gender Gender)
         {
-            this.name = name;
-            this.birthdate = birthdate;
-            this.gender = gender;
+            this.Name = Name;
+            this.Birthdate = Birthdate;
+            this.Gender = Gender;
         }
 
         public override string ToString()
         {
-            return "Name: " + name + "\nBirthdate: " + birthdate + "\nGender: " + gender;
+            return "Name: " + Name + "\nBirthdate: " + Birthdate + "\nGender: " + Gender;
         }
     }
 }

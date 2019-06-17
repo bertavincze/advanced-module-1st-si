@@ -6,22 +6,30 @@ using System.Threading.Tasks;
 
 namespace CreateClass
 {
-    class Employee : Person
+    class Employee : Person, ICloneable
     {
-        int salary;
-        string profession;
-        Room room;
+        private int Salary;
+        private string Profession;
 
-        public Employee(string name, DateTime birthdate, Gender gender, int salary, string profession, Room room) : base(name, birthdate, gender)
+        public Employee(string Name, DateTime Birthdate, Gender Gender, int Salary, string Profession) : base(Name, Birthdate, Gender)
         {
-            this.salary = salary;
-            this.profession = profession;
-            this.room = room;
+            this.Salary = Salary;
+            this.Profession = Profession;
+        }
+
+        public Room Room { get; internal set; }
+
+        public object Clone()
+        {
+            Employee newEmployee = (Employee) MemberwiseClone();
+            newEmployee.Room = new Room(Room.Number);
+            return newEmployee;
         }
 
         public override string ToString()
         {
-            return base.ToString() + "\nSalary: " + salary + "\nProfession: " + profession + "\nRoom: " + room.getNumber();
+            return base.ToString() + "\nSalary: " + Salary + "\nProfession: " + Profession + "\nRoom: " + Room.Number;
         }
+
     }
 }

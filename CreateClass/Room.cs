@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CreateClass
+﻿namespace CreateClass
 {
-    class Room
+    public class Room
     {
-        int number;
+        public int Number;
 
-        public Room(int number)
+        public Room(int Number)
         {
-            this.number = number;
-        }
-
-        public int getNumber()
-        {
-            return number;
+            this.Number = Number;
         }
     }
 }

@@ -23,7 +23,7 @@ namespace CreateClass
 
         public override string ToString()
         {
-            return "Name: " + this.name + "\nBirthdate: " + this.birthdate + "\nGender: " + this.gender;
+            return "Name: " + name + "\nBirthdate: " + birthdate + "\nGender: " + gender;
         }
     }
 }

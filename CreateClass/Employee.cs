@@ -1,23 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CreateClass
 {
     class Employee : Person, ICloneable
     {
-        private int Salary;
-        private string Profession;
+        public Room Room { get; internal set; }
+        public int Salary { get; set; }
+        public string Profession { get; set; }
 
         public Employee(string Name, DateTime Birthdate, Gender Gender, int Salary, string Profession) : base(Name, Birthdate, Gender)
         {
             this.Salary = Salary;
             this.Profession = Profession;
         }
-
-        public Room Room { get; internal set; }
 
         public object Clone()
         {
